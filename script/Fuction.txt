@@ -1,0 +1,134 @@
+-- This function returns the unique identifier of the current stage in the game.
+-- The stage ID helps to determine which stage the match is taking place on.
+-- It can be used for stage-specific logic or environment-based interactions.
+function getStageId() end
+
+-- This function returns the X-coordinate (horizontal position) of the local player in the game world.
+-- The X-coordinate represents the local player's position on the horizontal axis of the stage.
+-- It is used to track the local player's movement across the stage.
+function getLocalPosX() end
+
+-- This function returns the Y-coordinate (vertical position) of the local player in the game world.
+-- The Y-coordinate represents the local player's position on the vertical axis of the stage.
+-- It is used to track whether the local player is on the ground or in the air.
+function getLocalPosY() end
+
+-- This function returns the X-coordinate (horizontal position) of the opponent in the game world.
+-- The X-coordinate represents the opponent's position on the horizontal axis of the stage.
+-- It is used for tracking and comparing the opponent's movement across the stage.
+function getOpponentPosX() end
+
+-- This function returns the Y-coordinate (vertical position) of the opponent in the game world.
+-- The Y-coordinate represents the opponent's position on the vertical axis of the stage.
+-- It is useful for detecting whether the opponent is in the air, on the ground, or in other vertical states.
+function getOpponentPosY() end
+
+-- This function asynchronously executes a macro with the given parameters.
+-- It schedules the macro to be executed in the background, allowing the program to continue running without waiting for the macro to complete.
+-- The macro is defined by a direction key, a combo key, a number of frames, and a key type (e.g., press, release, or hold).
+-- This operation is non-blocking, ensuring that the program remains responsive while the macro is being executed.
+function asyncExecuteMacro(directionKey, comboKey, frames, keyType) end
+
+-- This function asynchronously delays execution by a specified number of frames.
+-- It schedules a delay that will be processed in the background, allowing the program to continue executing other tasks while waiting.
+-- The delay is frame-based, meaning it is tied to the program's frame rate rather than a fixed time interval.
+function asyncDelayFrames(frames) end
+
+-- This function asynchronously disables the keyboard input functionality, preventing the system from processing keypresses.
+-- All key events will be ignored or overridden while this state is active, ensuring the keyboard does not affect program logic.
+-- This operation is performed asynchronously, meaning it will not block the execution of subsequent code.
+function asyncDisableKeyboardInput() end
+
+-- This function asynchronously re-enables the keyboard input functionality, allowing the system to process keypresses normally.
+-- It effectively sets the keyboard input state to "enabled," ensuring all key events are captured and processed as expected.
+-- This operation is performed asynchronously, meaning it will not block the execution of subsequent code.
+function asyncEnableKeyboardInput() end
+
+The above functions can be executed in drawing events or message events to prevent synchronization waiting
+
+-- This function re-enables the keyboard input functionality, allowing the system to process keypresses normally. It effectively sets the keyboard input state to "enabled," ensuring all key events are captured and processed as expected.
+function EnableKeyboardInput() end
+
+-- This function disables the keyboard input functionality, preventing the system from processing keypresses. All key events will be ignored or overridden while this state is active, ensuring the keyboard does not affect program logic.
+function DisableKeyboardInput() end
+
+-- Use this function to retrieve the local language and check the multi language support from which country used to create the Lua menu section
+function getLocaleLanguage() end
+
+-- Used to check if the opponent can be attacked currently, whether in defense or any other state. Use this function to check if the counterattack is 100% successful without any mistakes return is boolean
+function isCounterAttackPossible(FrameAdvantage) end
+
+-- Get a random number within the specified range
+function getRandomInt(min, max) end
+
+-- Delays execution by a specified number of frames
+function delayFrames(frames) end
+
+-- Executes a macro with given parameters
+function executeMacro(directionKey, comboKey, frames, keyType) end
+
+-- Checks if the character ID is not equal to a specific ID
+function isNotCharacter(CharId) end
+
+-- Retrieves the local player's frame advantage
+function getLocalFrameAdvantage() end
+
+-- Retrieves the local player's Heat Smash meter
+function getLocalHeatSmashMeter() end
+
+-- Retrieves the local player's health value
+function getLocalHealthValue() end
+
+-- Retrieves the local player's last attack type
+function getLocalLastAttackType() end
+
+-- Retrieves the opponent's last attack type
+function getOpponentLastAttackType() end
+
+-- Retrieves the opponent's frame advantage
+function getOpponentFrameAdvantage() end
+
+-- Retrieves the opponent's Heat Smash meter
+function getOpponentHeatSmashMeter() end
+
+-- Retrieves the opponent's health value
+function getOpponentHealthValue() end
+
+-- Retrieves the opponent's LastMove value
+function getLocalLastMoveId() end
+
+-- Retrieves the opponent's LastMove value
+function getOpponentLastMoveId() end
+
+--- Represents a game snapshot, containing states for both the player (`self`) and the opponent (`enemy`).
+--- @class Snapshot
+--- @field self CharacterState The player's character state.
+--- @field enemy CharacterState The opponent's character state.
+
+--- Represents a character's state at a specific frame.
+--- @class CharacterState
+--- @field FrameCount integer The current frame count for the character.
+--- @field FacingDirection integer The facing direction (0 = left, 1 = right).
+--- @field IsAir boolean Whether the character is airborne.
+--- @field CharacterID integer The character's unique ID.
+--- @field MoveID integer The current move's ID.
+--- @field AttackType integer The type of attack being performed.
+--- @field MoveTimer integer Frame timer for the current move.
+--- @field SimpleMoveState integer Simplified movement state.
+--- @field ComplexMoveState integer Detailed movement state.
+--- @field Distance number The distance to the opponent.
+--- @field HitOutcome integer The outcome of the last hit (e.g., blocked, hit, or whiffed).
+--- @field StunState integer The current stun state of the character.
+--- @field Recovery integer The number of recovery frames left.
+--- @field AttackDamage integer The damage dealt by the current attack.
+--- @field IsRageStarte boolean Whether the character is in Rage mode.
+--- @field IsHeatSmashUsed boolean Whether Heat Smash has been used.
+--- @field ThrowTech integer Status of throw tech.
+--- @field InputAttack integer The attack input command.
+--- @field InputDirection integer The directional input command.
+--- @field Startup integer The startup frames of the current attack.
+--- @field StartupEnd integer The frame when startup ends.
+--- @field EndFrame integer The frame when the move ends.
+--- @field IsThrowing boolean Whether the character is performing a throw.
+--- @field AttackBonesType integer The type of attack bones being used.
+function getCharacterState(rollback_frame) end
