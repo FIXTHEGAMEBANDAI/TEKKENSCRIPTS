@@ -19,4 +19,6 @@ to execute a random DLL file so you can lose in Tekken 8 ranked because you are 
 Basic binary analysis does not indicate any obvious signs of malware.
 Performing a complete reverse engineering of this would take a lot of effort on my part and I am lazy, it is all written in c++ if anyone wants to take a shot.
 
+As of writing Feb 28 I will be running the script in a VM with a real copy of T8 to test over the weekend, may update any findings below
+
 
