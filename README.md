@@ -23,6 +23,4 @@ To be honest props to the dev the actual scripting part in .lua is very intuitiv
 
 As of writing Feb 28 I will be running the script in a VM with a real copy of T8 to test over the weekend, may update any findings below
 
-@xihad on discord
-
 
