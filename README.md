@@ -10,3 +10,10 @@ This file contains all the scripts that can be found in the scripts folder and a
 Does not currently appear to communicate to this link after the dowload is complete however I have not used it with Tekken 8 open
 Once downloaded and extracted it injects the engine.dll into T8
 
+A virus total scan for the engine.dll can be found at the below link
+https://www.virustotal.com/gui/file/98ede844f0e3e78ad9216378223b62041ce4d22c39496922d32830d567a94b9d/behavior
+
+Many red flags in here but that is expected due to how you are trusting a random Chinese man on discord with full administrator access
+to execute a random DLL file so you can lose in Tekken 8 ranked because you are shit at the game
+
+
