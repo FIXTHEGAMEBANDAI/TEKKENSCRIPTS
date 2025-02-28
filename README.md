@@ -7,8 +7,8 @@ Summary of .exe functions: When run, connects to https://tekkenscript.com/api/in
 {"data":{"ver":"1.1.6.1","file_list":[{"name":"Release.7z","url":"file\/1c\/c74aadbd8de02349a58df6d2e0213b.7z"}]}}
 
 This file contains all the scripts that can be found in the scripts folder and any missing files to make the cheats work
-Does not currently appear to communicate to this link after the download is complete however I have not used it with Tekken 8 open
-Once downloaded and extracted it injects the engine.dll into T8
+Does not currently appear to communicate to this link after the download is complete however I have not used it with Tekken 8 open.
+Once downloaded the .exe injects the engine.dll file into T8
 
 A virus total scan for the engine.dll can be found at the below link
 https://www.virustotal.com/gui/file/98ede844f0e3e78ad9216378223b62041ce4d22c39496922d32830d567a94b9d/behavior
@@ -16,6 +16,7 @@ https://www.virustotal.com/gui/file/98ede844f0e3e78ad9216378223b62041ce4d22c3949
 Many red flags in here but that is expected due to how you are trusting a random Chinese man on discord with full administrator access
 to execute a random DLL file so you can lose in Tekken 8 ranked because you are shit at the game
 
-Basic binary analysis does not indicate any obvious signs of malware
+Basic binary analysis does not indicate any obvious signs of malware.
+Performing a complete reverse engineering of this would take a lot of effort on my part and I am lazy, it is all written in c++ if anyone wants to take a shot.
 
 
